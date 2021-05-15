@@ -13,6 +13,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px 0 50px 0;
+  margin: 0px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+  font: 25px "NK57";
+  letter-spacing: 10px;
 }
 
 .menu {
@@ -20,16 +28,24 @@ body {
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
+  padding: 0;
 }
 
 .menu li a {
   text-decoration: none;
+  color: black;
+  font: 16px Arial;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding-bottom: 50px;
 }
 
 .main-content {
@@ -37,7 +53,7 @@ body {
   flex-direction: column;
   align-items: center; 
   width: 100%;
-  font-size: 20px;
+  font: 20px Arial;
 }
 
 .main-content .title {
@@ -48,6 +64,75 @@ body {
   width: 450px;
 }
 
+.description ul {
+  list-style: none;
+}
+
+.description ul li:before {
+  content: "\2665";
+}
+
+.icon {
+  padding: 10px;
+}
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  width: 70px;
+}
+
 .footer {
-  width: 10px;
+  background: black;
+  line-height: 2px;
+  color: #e3e3e3;
+  text-align: center;
+  padding: 15px;
+  font: 13px Arial;
+}
+
+.footer .author {
+  color: white;
+  font: 14px Arial;
+}
+
+.footer a {
+  text-decoration: none;
+  align-items: center;
+  color: white;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "NK57";
+  src: url("../icons/18888.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@media (max-width: 1080px) {
+  .content {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .social {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .description {
+    width: auto;
+    padding-right: 20px;
+  }
 }

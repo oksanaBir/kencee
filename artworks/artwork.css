@@ -2,6 +2,17 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.layout {
+  position: relative;
+  display: block;
+  background-color: red;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -13,6 +24,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px 0 50px 0;
+  margin: 0px;
+  color: black;
+  font: 25px "NK57";
+  letter-spacing: 10px;
 }
 
 .menu {
@@ -20,18 +35,106 @@ body {
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
+  padding: 0;
 }
 
 .menu li a {
   text-decoration: none;
+  color: black;
+  font: 16px Arial;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 
-.block1, .block2 {
-  
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+  padding-bottom: 50px;
+}
+
+.block {
+  padding: 25px;
+}
+
+.block img {
+  position: relative;
+  width: 373px;
+  height: 373px;
+  z-index: 0;
+}
+
+.icon {
+  padding: 10px;
+}
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  width: 70px;
+}
+
+.footer {
+  background: black;
+  line-height: 2px;
+  color: #e3e3e3;
+  text-align: center;
+  padding: 15px;
+  font: 13px Arial;
+}
+
+.footer .author {
+  color: white;
+  font: 14px Arial;
+}
+
+.footer a {
+  text-decoration: none;
+  align-items: center;
+  color: white;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "NK57";
+  src: url("../icons/18888.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@media (max-width: 1400px) {
+  .content {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .social {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .description {
+    width: auto;
+    padding-right: 20px;
+  }
 }
